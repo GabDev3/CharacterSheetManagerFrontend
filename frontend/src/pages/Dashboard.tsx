@@ -1,4 +1,4 @@
-// src/pages/Dashboard.tsx - FIXED
+
 import React, { useState } from 'react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Card, CardHeader, CardBody } from '@/components/ui/Card';
@@ -15,7 +15,7 @@ export const Dashboard: React.FC = () => {
   const deleteCharacter = useDeleteCharacter();
   const navigate = useNavigate();
   
-  // Add modal state - THIS WAS MISSING
+  
   const [selectedCharacterId, setSelectedCharacterId] = useState<number | null>(null);
   const { data: selectedCharacter } = useCharacter(selectedCharacterId!);
 
@@ -69,7 +69,7 @@ export const Dashboard: React.FC = () => {
         }}
       />
 
-      {/* Dashboard Stats */}
+      {}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {dashboardStats.map((stat, index) => (
           <Card key={index}>
@@ -87,7 +87,7 @@ export const Dashboard: React.FC = () => {
         ))}
       </div>
 
-      {/* Recent Characters */}
+      {}
       <Card>
         <CardHeader>
           <div className="flex items-center justify-between">
@@ -107,8 +107,8 @@ export const Dashboard: React.FC = () => {
                 <CharacterCard
                   key={character.id}
                   character={character}
-                  onView={setSelectedCharacterId} // FIXED: Use modal instead of navigate
-                  onDelete={handleDelete} // FIXED: Use proper delete handler
+                  onView={setSelectedCharacterId} 
+                  onDelete={handleDelete} 
                 />
               ))}
             </div>
@@ -132,7 +132,7 @@ export const Dashboard: React.FC = () => {
         </CardBody>
       </Card>
 
-      {/* ADD MISSING CHARACTER MODAL */}
+      {}
       <CharacterModal
         character={selectedCharacter || null}
         isOpen={!!selectedCharacterId}

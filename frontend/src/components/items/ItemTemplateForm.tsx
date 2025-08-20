@@ -1,4 +1,4 @@
-// src/components/items/ItemTemplateForm.tsx
+
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -74,7 +74,7 @@ export const ItemTemplateForm: React.FC<ItemTemplateFormProps> = ({
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Basic Information */}
+        {}
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold flex items-center">
@@ -124,7 +124,7 @@ export const ItemTemplateForm: React.FC<ItemTemplateFormProps> = ({
           </CardBody>
         </Card>
 
-        {/* Bonuses */}
+        {}
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold flex items-center">

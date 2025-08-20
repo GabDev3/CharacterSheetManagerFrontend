@@ -1,4 +1,4 @@
-// src/components/character/CharacterModal.tsx - WITH ITEM BONUSES
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Button } from '@/components/ui/Button';
@@ -50,7 +50,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
   const createSpellFromTemplate = useCreateSpellFromTemplate();
   const deleteSpell = useDeleteSpell();
 
-  // Calculate item bonuses
+  
   const itemBonuses = useMemo((): ItemBonuses => {
     if (!character?.items) return {
       strength: 0,
@@ -81,7 +81,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
     });
   }, [character?.items]);
 
-  // Calculate effective stats (base + bonuses)
+  
   const effectiveStats = useMemo(() => {
     if (!character) return null;
     
@@ -96,7 +96,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
     };
   }, [character, itemBonuses]);
 
-  // Reset editing state when character changes or modal closes
+  
   useEffect(() => {
     if (!isOpen || !character) {
       setIsEditing(false);
@@ -343,7 +343,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="xl" title="Character Details">
       <div className="space-y-6">
-        {/* Character Header */}
+        {}
         <div className="bg-gradient-to-r from-primary-500 to-primary-600 text-white p-6 rounded-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -440,7 +440,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Ability Scores */}
+          {}
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
@@ -500,9 +500,9 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
             </Card>
           </div>
 
-          {/* Items & Spells */}
+          {}
           <div className="space-y-6">
-            {/* Items */}
+            {}
             <Card>
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -590,7 +590,7 @@ export const CharacterModal: React.FC<CharacterModalProps> = ({
               </CardBody>
             </Card>
 
-            {/* Spells */}
+            {}
             <Card>
               <CardHeader>
                 <div className="flex items-center justify-between">

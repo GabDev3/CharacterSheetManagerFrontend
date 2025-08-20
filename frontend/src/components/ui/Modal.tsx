@@ -1,5 +1,5 @@
 
-// src/components/ui/Modal.tsx
+
 import React, { useEffect } from 'react';
 import { clsx } from 'clsx';
 import { X } from 'lucide-react';

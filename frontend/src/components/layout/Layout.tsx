@@ -1,4 +1,4 @@
-// src/components/layout/Layout.tsx
+
 import React from 'react';
 import { Sidebar } from './Sidebar';
 
@@ -10,7 +10,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <Sidebar />
-      {/* Make main take full height & scrollable */}
+      {}
       <main className="flex-1 ml-70 h-screen overflow-y-auto">
         <div className="p-8">
           {children}

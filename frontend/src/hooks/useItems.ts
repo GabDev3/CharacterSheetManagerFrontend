@@ -1,4 +1,4 @@
-// src/hooks/useItems.ts
+
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { 
   Item, 
@@ -8,7 +8,7 @@ import {
 } from '@/types/api';
 import { api } from '@/lib/api';
 
-// Get all items
+
 export const useItems = () => {
   return useQuery<Item[]>({
     queryKey: ['items'],
@@ -16,7 +16,7 @@ export const useItems = () => {
   });
 };
 
-// Get single item
+
 export const useItem = (id: number) => {
   return useQuery<Item>({
     queryKey: ['items', id],
@@ -25,7 +25,7 @@ export const useItem = (id: number) => {
   });
 };
 
-// Get items by character
+
 export const useItemsByCharacter = (characterId: number) => {
   return useQuery<Item[]>({
     queryKey: ['items', 'character', characterId],
@@ -34,7 +34,7 @@ export const useItemsByCharacter = (characterId: number) => {
   });
 };
 
-// Create item
+
 export const useCreateItem = () => {
   const queryClient = useQueryClient();
 
@@ -48,7 +48,7 @@ export const useCreateItem = () => {
   });
 };
 
-// Create item from template
+
 export const useCreateItemFromTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -62,7 +62,7 @@ export const useCreateItemFromTemplate = () => {
   });
 };
 
-// Update item
+
 export const useUpdateItem = () => {
   const queryClient = useQueryClient();
 
@@ -77,7 +77,7 @@ export const useUpdateItem = () => {
   });
 };
 
-// Delete item
+
 export const useDeleteItem = () => {
   const queryClient = useQueryClient();
 

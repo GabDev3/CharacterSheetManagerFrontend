@@ -1,4 +1,4 @@
-// sru/pages/CreateCharacter.tsx
+
 import React from 'react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { CharacterForm } from '@/components/character/CharacterForm';

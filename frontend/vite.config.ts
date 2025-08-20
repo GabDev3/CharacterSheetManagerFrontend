@@ -35,5 +35,5 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
   },
-  appType: 'spa', // 👈 tells Vite to serve index.html for unknown routes
+  appType: 'spa',
 });

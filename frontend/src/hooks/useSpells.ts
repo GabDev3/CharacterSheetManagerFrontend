@@ -1,4 +1,4 @@
-// src/hooks/useSpells.ts
+
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { 
   Spell, 
@@ -8,7 +8,7 @@ import {
 } from '@/types/api';
 import { api } from '@/lib/api';
 
-// Get all spells
+
 export const useSpells = () => {
   return useQuery<Spell[]>({
     queryKey: ['spells'],
@@ -16,7 +16,7 @@ export const useSpells = () => {
   });
 };
 
-// Get single spell
+
 export const useSpell = (id: number) => {
   return useQuery<Spell>({
     queryKey: ['spells', id],
@@ -25,7 +25,7 @@ export const useSpell = (id: number) => {
   });
 };
 
-// Get spells by character
+
 export const useSpellsByCharacter = (characterId: number) => {
   return useQuery<Spell[]>({
     queryKey: ['spells', 'character', characterId],
@@ -34,7 +34,7 @@ export const useSpellsByCharacter = (characterId: number) => {
   });
 };
 
-// Create spell
+
 export const useCreateSpell = () => {
   const queryClient = useQueryClient();
 
@@ -48,7 +48,7 @@ export const useCreateSpell = () => {
   });
 };
 
-// Create spell from template
+
 export const useCreateSpellFromTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -62,7 +62,7 @@ export const useCreateSpellFromTemplate = () => {
   });
 };
 
-// Update spell
+
 export const useUpdateSpell = () => {
   const queryClient = useQueryClient();
 
@@ -77,7 +77,7 @@ export const useUpdateSpell = () => {
   });
 };
 
-// Delete spell
+
 export const useDeleteSpell = () => {
   const queryClient = useQueryClient();
 

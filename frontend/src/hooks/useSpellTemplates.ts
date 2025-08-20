@@ -1,4 +1,4 @@
-// src/hooks/useSpellTemplates.ts
+
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { 
   SpellTemplate, 
@@ -7,7 +7,7 @@ import {
 } from '@/types/api';
 import { api } from '@/lib/api';
 
-// Get all spell templates
+
 export const useSpellTemplates = () => {
   return useQuery<SpellTemplate[]>({
     queryKey: ['spellTemplates'],
@@ -15,7 +15,7 @@ export const useSpellTemplates = () => {
   });
 };
 
-// Get active spell templates only
+
 export const useActiveSpellTemplates = () => {
   return useQuery<SpellTemplate[]>({
     queryKey: ['spellTemplates', 'active'],
@@ -23,7 +23,7 @@ export const useActiveSpellTemplates = () => {
   });
 };
 
-// Get single spell template
+
 export const useSpellTemplate = (id: number) => {
   return useQuery<SpellTemplate>({
     queryKey: ['spellTemplates', id],
@@ -32,7 +32,7 @@ export const useSpellTemplate = (id: number) => {
   });
 };
 
-// Create spell template
+
 export const useCreateSpellTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -44,7 +44,7 @@ export const useCreateSpellTemplate = () => {
   });
 };
 
-// Update spell template
+
 export const useUpdateSpellTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -57,7 +57,7 @@ export const useUpdateSpellTemplate = () => {
   });
 };
 
-// Partially update spell template
+
 export const usePatchSpellTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -70,7 +70,7 @@ export const usePatchSpellTemplate = () => {
   });
 };
 
-// Delete spell template
+
 export const useDeleteSpellTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -82,7 +82,7 @@ export const useDeleteSpellTemplate = () => {
   });
 };
 
-// Get spell templates by level
+
 export const useSpellTemplatesByLevel = (level: number) => {
   return useQuery<SpellTemplate[]>({
     queryKey: ['spellTemplates', 'level', level],
@@ -91,7 +91,7 @@ export const useSpellTemplatesByLevel = (level: number) => {
   });
 };
 
-// Get spell templates by school
+
 export const useSpellTemplatesBySchool = (school: string) => {
   return useQuery<SpellTemplate[]>({
     queryKey: ['spellTemplates', 'school', school],
@@ -100,7 +100,7 @@ export const useSpellTemplatesBySchool = (school: string) => {
   });
 };
 
-// Get available schools
+
 export const useSpellTemplateSchools = () => {
   return useQuery<string[]>({
     queryKey: ['spellTemplates', 'schools'],

@@ -1,4 +1,4 @@
-// src/pages/CharacterList.tsx
+
 import React, { useState } from 'react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Card, CardBody } from '@/components/ui/Card';
@@ -81,7 +81,7 @@ export const CharacterList: React.FC = () => {
         }}
       />
 
-      {/* Filters */}
+      {}
       <Card className="mb-6">
         <CardBody>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -108,7 +108,7 @@ export const CharacterList: React.FC = () => {
         </CardBody>
       </Card>
 
-      {/* Character Grid */}
+      {}
       {filteredCharacters.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCharacters.map((character) => (
@@ -143,7 +143,7 @@ export const CharacterList: React.FC = () => {
         </Card>
       )}
 
-      {/* Character Modal */}
+      {}
       <CharacterModal
         character={selectedCharacter || null}
         isOpen={!!selectedCharacterId}

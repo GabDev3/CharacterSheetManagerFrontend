@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    /* @apply bg-primary-500 text-foreground; */
+    
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -14,7 +14,7 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* body shouldn’t scroll */
+  overflow: hidden; 
 }
 
 
@@ -29,7 +29,7 @@ html, body, #root {
   }
 }
 
-/* Custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -48,7 +48,7 @@ html, body, #root {
   background: #a8a8a8;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -77,12 +77,12 @@ html, body, #root {
   animation: slideIn 0.3s ease-out;
 }
 
-/* Focus styles */
+
 .focus-visible:focus {
   @apply outline-none ring-2 ring-primary-500 ring-offset-2;
 }
 
-/* Custom gradient backgrounds */
+
 .bg-gradient-primary {
   background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
 }
@@ -99,7 +99,7 @@ html, body, #root {
   background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
 }
 
-/* Character card hover effects */
+
 .character-card {
   transition: all 0.3s ease;
 }
@@ -109,12 +109,12 @@ html, body, #root {
   box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Modal backdrop blur effect */
+
 .modal-backdrop {
   backdrop-filter: blur(4px);
 }
 
-/* Loading spinner */
+
 @keyframes spin {
   to {
     transform: rotate(360deg);

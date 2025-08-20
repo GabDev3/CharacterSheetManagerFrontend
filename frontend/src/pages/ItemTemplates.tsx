@@ -1,4 +1,4 @@
-// src/pages/ItemTemplates.tsx
+
 import React, { useState } from 'react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Card, CardBody } from '@/components/ui/Card';
@@ -107,7 +107,7 @@ export const ItemTemplates: React.FC = () => {
         }}
       />
 
-      {/* Filters */}
+      {}
       <Card className="mb-6">
         <CardBody>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -129,7 +129,7 @@ export const ItemTemplates: React.FC = () => {
         </CardBody>
       </Card>
 
-      {/* Item Grid */}
+      {}
       {filteredItems.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => {
@@ -211,7 +211,7 @@ export const ItemTemplates: React.FC = () => {
         </Card>
       )}
 
-      {/* Create Item Modal */}
+      {}
       <Modal
         isOpen={isCreateModalOpen}
         onClose={() => setIsCreateModalOpen(false)}
@@ -225,7 +225,7 @@ export const ItemTemplates: React.FC = () => {
         />
       </Modal>
 
-      {/* Edit Item Modal */}
+      {}
       <Modal
         isOpen={!!editingItem}
         onClose={() => setEditingItem(null)}

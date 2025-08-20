@@ -1,4 +1,4 @@
-// src/pages/Profile.tsx
+
 import React from 'react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Card, CardHeader, CardBody } from '@/components/ui/Card';
@@ -36,7 +36,7 @@ export const Profile: React.FC = () => {
     { label: 'Total Characters', value: totalCharacters, color: 'primary' as const },
     { label: 'Average Level', value: avgLevel, color: 'success' as const },
     { label: 'Highest Level', value: highestLevel, color: 'warning' as const },
-    { label: 'Total Spells', value: '0', color: 'primary' as const }, // Would calculate from actual data
+    { label: 'Total Spells', value: '0', color: 'primary' as const }, 
   ];
 
   const levelRanges = {
@@ -90,7 +90,7 @@ export const Profile: React.FC = () => {
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Profile Stats */}
+        {}
         <div className="lg:col-span-2">
           <Card className="mb-6">
             <CardHeader>
@@ -144,7 +144,7 @@ export const Profile: React.FC = () => {
           </Card>
         </div>
 
-        {/* Recent Activity & Achievements */}
+        {}
         <div className="space-y-6">
           <Card>
             <CardHeader>

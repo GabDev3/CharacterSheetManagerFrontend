@@ -1,4 +1,4 @@
-// src/hooks/useItemTemplates.ts
+
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { 
   ItemTemplate, 
@@ -7,7 +7,7 @@ import {
 } from '@/types/api';
 import { api } from '@/lib/api';
 
-// Get all item templates
+
 export const useItemTemplates = () => {
   return useQuery<ItemTemplate[]>({
     queryKey: ['itemTemplates'],
@@ -15,7 +15,7 @@ export const useItemTemplates = () => {
   });
 };
 
-// Get active item templates only
+
 export const useActiveItemTemplates = () => {
   return useQuery<ItemTemplate[]>({
     queryKey: ['itemTemplates', 'active'],
@@ -23,7 +23,7 @@ export const useActiveItemTemplates = () => {
   });
 };
 
-// Get single item template
+
 export const useItemTemplate = (id: number) => {
   return useQuery<ItemTemplate>({
     queryKey: ['itemTemplates', id],
@@ -32,7 +32,7 @@ export const useItemTemplate = (id: number) => {
   });
 };
 
-// Create item template
+
 export const useCreateItemTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -44,7 +44,7 @@ export const useCreateItemTemplate = () => {
   });
 };
 
-// Update item template
+
 export const useUpdateItemTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -57,7 +57,7 @@ export const useUpdateItemTemplate = () => {
   });
 };
 
-// Partially update item template
+
 export const usePatchItemTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -70,7 +70,7 @@ export const usePatchItemTemplate = () => {
   });
 };
 
-// Delete item template
+
 export const useDeleteItemTemplate = () => {
   const queryClient = useQueryClient();
 
@@ -82,7 +82,7 @@ export const useDeleteItemTemplate = () => {
   });
 };
 
-// Get item templates by category
+
 export const useItemTemplatesByCategory = (category: string) => {
   return useQuery<ItemTemplate[]>({
     queryKey: ['itemTemplates', 'category', category],
@@ -91,7 +91,7 @@ export const useItemTemplatesByCategory = (category: string) => {
   });
 };
 
-// Get available categories
+
 export const useItemTemplateCategories = () => {
   return useQuery<string[]>({
     queryKey: ['itemTemplates', 'categories'],

@@ -1,8 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -18,7 +18,7 @@ export default {
           dark: '#2c3e50',
           darker: '#34495e',
         },
-        // 🔥 Dodajemy systemowe zmienne
+        
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         border: "hsl(var(--border))",

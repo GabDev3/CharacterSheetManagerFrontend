@@ -1,4 +1,4 @@
-// src/services/api.ts
+
 import axios, { AxiosInstance } from 'axios';
 import {
   Character,
@@ -24,7 +24,7 @@ class ApiClient {
       },
     });
 
-    // Response interceptor for error handling
+    
     this.client.interceptors.response.use(
       (response) => response,
       (error) => {
@@ -34,7 +34,7 @@ class ApiClient {
     );
   }
 
-  // Characters
+  
   async getCharacters(): Promise<CharacterSummary[]> {
     const response = await this.client.get('/Characters');
     return response.data;
@@ -78,7 +78,7 @@ class ApiClient {
     return response.data;
   }
 
-  // Items
+  
   async getItems(): Promise<Item[]> {
     const response = await this.client.get('/Items');
     return response.data;
@@ -121,7 +121,7 @@ class ApiClient {
     return response.data;
   }
 
-  // Item Templates
+  
   async getItemTemplates(): Promise<ItemTemplate[]> {
     const response = await this.client.get('/ItemTemplates');
     return response.data;
@@ -161,7 +161,7 @@ class ApiClient {
     return response.data;
   }
 
-  // Spells
+  
   async getSpells(): Promise<Spell[]> {
     const response = await this.client.get('/Spells');
     return response.data;
@@ -204,7 +204,7 @@ class ApiClient {
     return response.data;
   }
 
-  // Spell Templates
+  
   async getSpellTemplates(): Promise<SpellTemplate[]> {
     const response = await this.client.get('/SpellTemplates');
     return response.data;
@@ -250,6 +250,6 @@ class ApiClient {
   }
 }
 
-// Export singleton instance
+
 export const apiClient = new ApiClient();
 export default apiClient;

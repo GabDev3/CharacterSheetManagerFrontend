@@ -1,4 +1,4 @@
-// src/components/character/CharacterAvatar.tsx - FIXED IMAGE RENDERING
+
 import React, { useState } from 'react';
 import { User } from 'lucide-react';
 import { clsx } from 'clsx';
@@ -32,7 +32,7 @@ export const CharacterAvatar: React.FC<CharacterAvatarProps> = ({
     xl: 'w-12 h-12'
   };
 
-  // Show placeholder if no image, empty image, or image failed to load
+  
   const shouldShowPlaceholder = !imageBase64 || imageBase64.trim() === '' || imageError;
 
   if (shouldShowPlaceholder) {

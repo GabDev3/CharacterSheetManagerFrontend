@@ -1,4 +1,4 @@
-// src/pages/SpellTemplates.tsx
+
 import React, { useState } from 'react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Card, CardBody } from '@/components/ui/Card';
@@ -129,7 +129,7 @@ export const SpellTemplates: React.FC = () => {
         }}
       />
 
-      {/* Filters */}
+      {}
       <Card className="mb-6">
         <CardBody>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -156,7 +156,7 @@ export const SpellTemplates: React.FC = () => {
         </CardBody>
       </Card>
 
-      {/* Spell Grid */}
+      {}
       {filteredSpells.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSpells.map((spell) => {
@@ -239,7 +239,7 @@ export const SpellTemplates: React.FC = () => {
         </Card>
       )}
 
-      {/* Create Spell Modal */}
+      {}
       <Modal
         isOpen={isCreateModalOpen}
         onClose={() => setIsCreateModalOpen(false)}
@@ -253,7 +253,7 @@ export const SpellTemplates: React.FC = () => {
         />
       </Modal>
 
-      {/* Edit Spell Modal */}
+      {}
       <Modal
         isOpen={!!editingSpell}
         onClose={() => setEditingSpell(null)}

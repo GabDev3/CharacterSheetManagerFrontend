@@ -1,4 +1,4 @@
-// src/types/api.ts - Update your types to match the DTOs
+
 
 export interface Character {
   id: number;
@@ -25,7 +25,7 @@ export interface CharacterSummary {
   class: string;
   level: number;
   armorClass: number;
-  imageBase64?: string | null; // ADDED THIS FIELD
+  imageBase64?: string | null; 
   createdAt: string;
 }
 
@@ -43,7 +43,7 @@ export interface CreateCharacterRequest {
   imageBase64?: string | null;
 }
 
-// NEW: Patch request type for partial updates
+
 export interface PatchCharacterRequest {
   name?: string;
   class?: string;

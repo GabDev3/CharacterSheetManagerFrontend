@@ -1,11 +1,11 @@
-// src/App.tsx
+
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { Layout } from '@/components/layout/Layout';
 
-// Pages
+
 import { Dashboard } from '@/pages/Dashboard';
 import { CharacterList } from '@/pages/CharacterList';
 import { CreateCharacter } from '@/pages/CreateCharacter';
@@ -13,13 +13,13 @@ import { ItemTemplates } from '@/pages/ItemTemplates';
 import { SpellTemplates } from '@/pages/SpellTemplates';
 import { Profile } from '@/pages/Profile';
 
-// Create query client
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       retry: 1,
       refetchOnWindowFocus: false,
-      staleTime: 5 * 60 * 1000, // 5 minutes
+      staleTime: 5 * 60 * 1000, 
     },
     mutations: {
       retry: 1,
@@ -43,7 +43,7 @@ function App() {
         </Layout>
       </Router>
       
-      {/* Toast notifications */}
+      {}
       <Toaster
         position="top-right"
         toastOptions={{

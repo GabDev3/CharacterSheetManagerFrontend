@@ -1,10 +1,10 @@
-// src/hooks/useCharacters.ts - Updated to use PatchCharacterRequest
+
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Character, CharacterSummary, CreateCharacterRequest, PatchCharacterRequest } from '@/types/api';
 import { api } from '@/lib/api';
 
-// Get all characters (summary)
+
 export const useCharacters = () => {
   return useQuery<CharacterSummary[]>({
     queryKey: ['characters'],
@@ -15,7 +15,7 @@ export const useCharacters = () => {
   });
 };
 
-// Get single character with details
+
 export const useCharacter = (id: number) => {
   return useQuery<Character>({
     queryKey: ['characters', id],
@@ -27,7 +27,7 @@ export const useCharacter = (id: number) => {
   });
 };
 
-// Create character
+
 export const useCreateCharacter = () => {
   const queryClient = useQueryClient();
   
@@ -42,7 +42,7 @@ export const useCreateCharacter = () => {
   });
 };
 
-// FIXED: Patch character (partial update)
+
 export const usePatchCharacter = () => {
   const queryClient = useQueryClient();
   
@@ -54,7 +54,7 @@ export const usePatchCharacter = () => {
     },
     onSuccess: (data, variables) => {
       console.log('PATCH successful:', data);
-      // Invalidate and refetch queries
+      
       queryClient.invalidateQueries({ queryKey: ['characters'] });
       queryClient.invalidateQueries({ queryKey: ['characters', variables.id] });
     },
@@ -64,7 +64,7 @@ export const usePatchCharacter = () => {
   });
 };
 
-// Delete character
+
 export const useDeleteCharacter = () => {
   const queryClient = useQueryClient();
   

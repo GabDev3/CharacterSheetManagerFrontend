@@ -1,4 +1,4 @@
-// src/components/character/CharacterForm.tsx
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -77,7 +77,7 @@ export const CharacterForm: React.FC<CharacterFormProps> = ({
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Basic Information */}
+        {}
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold flex items-center">
@@ -127,7 +127,7 @@ export const CharacterForm: React.FC<CharacterFormProps> = ({
           </CardBody>
         </Card>
 
-        {/* Ability Scores */}
+        {}
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold flex items-center">

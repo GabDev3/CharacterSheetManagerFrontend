@@ -1,4 +1,4 @@
-// src/components/character/ImageUpload.tsx
+
 import React, { useRef, useState } from 'react';
 import { Upload, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';

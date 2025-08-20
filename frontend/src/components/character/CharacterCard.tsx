@@ -1,4 +1,4 @@
-// src/components/character/CharacterCard.tsx
+
 import React from 'react';
 import { Card, CardBody } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
@@ -24,7 +24,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
       <CardBody>
         <div className="flex items-center mb-4">
          <CharacterAvatar
-          imageBase64={character.imageBase64 ?? undefined} // undefined zamiast pustego stringa
+          imageBase64={character.imageBase64 ?? undefined} 
           name={character.name}
           size="lg"
           className="mr-4"
